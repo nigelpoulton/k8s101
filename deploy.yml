@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: web
+  labels:
+    app: web
+    zone: prod
+    version: v1
+spec:
+  selector:
+    matchLabels:
+      app: web
+  replicas: 1
+  strategy:
+    type: RollingUpdate
+  template:
+    metadata:
+      labels:
+        app: web
+        zone: prod
+        version: v1
+    spec:
+      containers:
+      - image: nigelpoulton/k8sbook:latest
+        name: web-ctr
+        ports:
+        - containerPort: 8080
