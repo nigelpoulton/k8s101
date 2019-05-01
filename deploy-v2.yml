@@ -10,9 +10,13 @@ spec:
   selector:
     matchLabels:
       app: web
-  replicas: 10
+  replicas: 1
+  minReadySeconds: 10
   strategy:
     type: RollingUpdate
+    rollingUpdate:
+      maxUnavailable: 1
+      maxSurge: 1
   template:
     metadata:
       labels:

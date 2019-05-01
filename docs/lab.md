@@ -6,7 +6,7 @@ You will need a Docker Hub or GitHub account to use PWK.
 
 ## Build the cluster
 
-1. Point your browser to [Play with Kubernetes](https://labs.play-with-k8s.com/)
+1. Point your browser to [Play with Kubernetes](https://workshop.play-with-k8s.com/)
 2. Login with Docker Hub or GitHub account
 3. Click `+ ADD NEW INSTANCE` from the left-side panel
 4. Complete step 1 and 2 shown in the terminal window on the right
